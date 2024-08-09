@@ -1,3 +1,11 @@
+def toString(matrix:list[list[any]])->str:
+    size_matrix:int = len(matrix)
+    str_matrix:str = ''
+    for element in matrix:
+        str_matrix += str(element)
+        if not element is matrix[len(matrix)-1]: str_matrix += '\n'
+    return str_matrix
+
 def determinant(matrix:list[list[int|float]])->int|float:
     """Calculates and returns the determinant of a matrix
 
